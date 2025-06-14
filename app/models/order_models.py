@@ -1,14 +1,16 @@
 from typing import List
 
 class OrderItemModel:
-    def __init__(self, itemId: str, quantity: int):
+    def __init__(self, itemId: str, quantity: int, name: str):
         self.itemId = itemId
         self.quantity = quantity
+        self.name = name
 
     def to_dict(self):
         return {
             "itemId": self.itemId,
-            "quantity": self.quantity
+            "quantity": self.quantity,
+            "name": self.name
         }
 
 class OrderModel:
