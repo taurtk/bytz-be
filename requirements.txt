@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+motor
+python-dotenv
+fastapi-users
+bcrypt
+pymongo
+bson
