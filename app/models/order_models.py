@@ -1,4 +1,5 @@
 from typing import List
+from datetime import datetime
 
 class OrderItemModel:
     def __init__(self, itemId: str, quantity: int, name: str, price: float):
@@ -16,12 +17,13 @@ class OrderItemModel:
         }
 
 class OrderModel:
-    def __init__(self, restaurantId: str, table: str, items: List[OrderItemModel], total: float, status: str = "pending"):
+    def __init__(self, restaurantId: str, table: str, items: List[OrderItemModel], total: float, status: str = "pending", createdAt: str = None):
         self.restaurantId = restaurantId
         self.table = table
         self.items = [item.to_dict() for item in items]
         self.total = total
         self.status = status
+        self.createdAt = createdAt or datetime.utcnow().isoformat()
 
     def to_dict(self):
         return {
@@ -29,5 +31,6 @@ class OrderModel:
             "table": self.table,
             "items": self.items,
             "total": self.total,
-            "status": self.status
+            "status": self.status,
+            "createdAt": self.createdAt
         }
