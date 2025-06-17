@@ -21,4 +21,4 @@ EXPOSE 8000
 ENV PYTHONUNBUFFERED=1
 
 # Start FastAPI with uvicorn, using PORT env var if set (for Render/Heroku compatibility)
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
