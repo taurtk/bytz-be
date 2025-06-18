@@ -21,7 +21,7 @@ def place_order(order: dict, db=Depends(get_database)):
 
 @router.get("/orders/{restaurant_id}", response_model=List[dict])
 def get_orders(restaurant_id: str, db=Depends(get_database)):
-    orders = list(db.orders.find({"restaurantId": restaurant_id}))
+    orders = list(db.orders.find({"restaurantId": restaurant_id}).sort("createdAt", -1))
     # Remove _id or convert to string for serialization
     for order in orders:
         order["id"] = str(order.pop("_id"))
