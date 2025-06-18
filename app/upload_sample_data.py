@@ -22,37 +22,53 @@ restaurants = [
         "name": "Saffron Grill",
         "logo": "🍛",
         "theme": {"primary": "#FF5733", "secondary": "#FFC300"},
-        "tables": {str(i): "empty" for i in range(1, 11)}
+        "tables": {str(i): "empty" for i in range(1, 11)},
+        "email": "owner@saffrongrill.com",
+        "signup_status": "not_signed_up",
+        "secret_signup_code": "SGRILL-2025"
     },
     {
         "id": "tokyobites",
         "name": "Tokyo Bites",
         "logo": "🍣",
         "theme": {"primary": "#1E1E1E", "secondary": "#E91E63"},
-        "tables": {str(i): "empty" for i in range(1, 11)}
+        "tables": {str(i): "empty" for i in range(1, 11)},
+        "email": "admin@tokyobites.jp",
+        "signup_status": "not_signed_up",
+        "secret_signup_code": "TOKYO-2025"
     },
     {
         "id": "bellavista",
         "name": "Bella Vista",
         "logo": "🍝",
         "theme": {"primary": "#000000", "secondary": "#374151"},
-        "tables": {str(i): "empty" for i in range(1, 11)}
+        "tables": {str(i): "empty" for i in range(1, 11)},
+        "email": "contact@bellavista.it",
+        "signup_status": "not_signed_up",
+        "secret_signup_code": "BELLA-2025"
     },
     {
         "id": "burgermafia",
         "name": "Burger Mafia",
         "logo": "🍔",
         "theme": {"primary": "#8B0000", "secondary": "#FF8C00"},
-        "tables": {str(i): "empty" for i in range(1, 11)}
+        "tables": {str(i): "empty" for i in range(1, 11)},
+        "email": "support@burgermafia.com",
+        "signup_status": "not_signed_up",
+        "secret_signup_code": "MAFIA-2025"
     },
     {
         "id": "greenleaf",
         "name": "Green Leaf",
         "logo": "🥗",
         "theme": {"primary": "#2E7D32", "secondary": "#A5D6A7"},
-        "tables": {str(i): "empty" for i in range(1, 11)}
+        "tables": {str(i): "empty" for i in range(1, 11)},
+        "email": "green@leaf.org",
+        "signup_status": "not_signed_up",
+        "secret_signup_code": "LEAFY-2025"
     }
 ]
+
 
 db.restaurants.insert_many(restaurants)
 
